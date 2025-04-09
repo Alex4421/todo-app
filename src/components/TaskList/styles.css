@@ -1,0 +1,130 @@
+.task-list {
+    list-style: none;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s;
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  .task-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .task-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #3498db;
+  }
+  
+  .task-text {
+    flex: 1;
+    font-size: 16px;
+    margin-right: 15px;
+    word-break: break-word;
+  }
+  
+  .task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #95a5a6;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .task-actions button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .task-actions button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .task-actions button img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .task-actions button:hover img {
+    opacity: 1;
+  }
+  .edit-mode {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    margin-right: 15px;
+  }
+  
+  .edit-mode input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .edit-mode input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .edit-mode button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .edit-mode button:first-of-type {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .edit-mode button:first-of-type:hover {
+    background-color: #27ae60;
+  }
+  
+  .edit-mode button:last-of-type {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .edit-mode button:last-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  @media (max-width: 640px) {
+    .edit-mode {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .edit-mode button {
+      width: 100%;
+    }
+  }

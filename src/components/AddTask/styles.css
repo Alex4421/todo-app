@@ -1,0 +1,41 @@
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .add-task input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .add-task input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .add-task button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .add-task button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 640px) {
+    .add-task {
+      flex-direction: column;
+    }
+  }
